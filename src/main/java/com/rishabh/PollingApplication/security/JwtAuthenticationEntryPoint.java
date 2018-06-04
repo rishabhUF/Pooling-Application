@@ -1,0 +1,4 @@
+package com.rishabh.PollingApplication.security;
+
+public class JwtAuthenticationEntryPoint {
+}
