@@ -8,6 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Poll {
@@ -21,6 +22,9 @@ public class Poll {
 
     @NotNull
     private Instant expirationDateTime;
+
+    @NotNull
+    private Date createdOn;
 
     @DBRef
     private List<Choice> choices = new ArrayList<>();
@@ -57,5 +61,13 @@ public class Poll {
     public void removeChoices(Choice choice) {
         choices.remove(choice);
         choice.setPoll(null);
+    }
+
+    public Date getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
     }
 }

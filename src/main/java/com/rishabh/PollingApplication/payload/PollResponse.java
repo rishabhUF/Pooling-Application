@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PollResponse {
 
-    private Long id;
+    private String id;
     private String question;
     private List<ChoiceResponse> choices;
     private UserSummary createdBy;
@@ -19,11 +19,11 @@ public class PollResponse {
     private Long selectedChoice;
     private Long totalVotes;
 
-    public Long getId() {
-        return id;
+    public String getId(String id) {
+        return this.id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
