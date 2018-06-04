@@ -1,6 +1,8 @@
 package com.rishabh.PollingApplication.config;
 
 import com.rishabh.PollingApplication.security.CustomUserDetailsService;
+import com.rishabh.PollingApplication.security.JwtAuthenticationEntryPoint;
+import com.rishabh.PollingApplication.security.JwtAuthenticationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
