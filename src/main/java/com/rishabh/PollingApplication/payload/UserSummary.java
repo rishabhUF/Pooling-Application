@@ -1,21 +1,21 @@
 package com.rishabh.PollingApplication.payload;
 
 public class UserSummary {
-    private Long id;
+    private String id;
     private String username;
     private String name;
 
-    public UserSummary(Long id, String username, String name) {
+    public UserSummary(String id, String username, String name) {
         this.id = id;
         this.username = username;
         this.name = name;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
