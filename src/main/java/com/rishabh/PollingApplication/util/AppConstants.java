@@ -1,6 +1,6 @@
 package com.rishabh.PollingApplication.util;
 
-public class AppConstants {
+public interface AppConstants {
 
     String DEFAULT_PAGE_NUMBER = "0";
     String DEFAULT_PAGE_SIZE = "30";
