@@ -14,7 +14,7 @@ public interface PollRepository extends MongoRepository<Poll,String> {
 
     Page<Poll> findByCreatedBy(String userId, Pageable pageable);
 
-    String countByCreatedBy(String userId);
+    Long countByCreatedBy(String userId);
 
     List<Poll> findByIdIn(List<String> pollIds);
 
