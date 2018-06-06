@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.core.index.Indexed;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.time.Instant;
 
 public class User {
 
@@ -15,7 +16,7 @@ public class User {
     @NotBlank
     private String name;
 
-    @Indexed
+    @Indexed(unique =  true)
     @NotBlank
     @Size(max = 15)
     private String username;
@@ -29,6 +30,9 @@ public class User {
     @NotBlank
     private String password;
 
+    @NotBlank
+    Instant createdAt;
+
     private Role roles;
 
     public User(){
@@ -40,6 +44,7 @@ public class User {
         this.username = username;
         this.email = email;
         this.password = password;
+        this.createdAt = Instant.now();
     }
 
     public String getId() {
@@ -84,5 +89,13 @@ public class User {
 
     public void setRoles(Role roles) {
         this.roles = roles;
+    }
+
+    public Instant getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Instant createdAt) {
+        this.createdAt = createdAt;
     }
 }

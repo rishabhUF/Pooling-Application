@@ -3,14 +3,14 @@ package com.rishabh.PollingApplication.payload;
 import java.time.Instant;
 
 public class UserProfile {
-    private Long id;
+    private String id;
     private String username;
     private String name;
     private Instant joinedAt;
     private Long pollCount;
     private Long voteCount;
 
-    public UserProfile(Long id, String username, String name, Instant joinedAt, Long pollCount, Long voteCount) {
+    public UserProfile(String id, String username, String name, Instant joinedAt, Long pollCount, Long voteCount) {
         this.id = id;
         this.username = username;
         this.name = name;
@@ -19,11 +19,11 @@ public class UserProfile {
         this.voteCount = voteCount;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
