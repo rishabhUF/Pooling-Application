@@ -25,7 +25,7 @@ public interface VoteRepository extends MongoRepository<Vote,String> {
     Vote findByUserIdAndPollId(@Param("userId") Long userId, @Param("pollId") Long pollId);
 
     @Query("SELECT COUNT(v.id) from Vote v where v.user.id = :userId")
-    long countByUserId(@Param("userId") Long userId);
+    long countByUserId(@Param("userId") String userId);
 
     @Query("SELECT v.poll.id FROM Vote v WHERE v.user.id = :userId")
     Page<Long> findVotedPollIdsByUserId(@Param("userId") Long userId, Pageable pageable);
